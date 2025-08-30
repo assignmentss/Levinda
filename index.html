@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lavinda Eye Specialist Hospital – Final Client Recommendation & Reflection</title>
+  <meta name="description" content="Consultancy webpage presenting the Final Client Recommendation & Reflection for Lavinda Eye Specialist Hospital, including embedded video and presentation." />
+  <style>
+    :root{
+      --bg1:#0f172a; /* slate-900 */
+      --bg2:#0b3b4b; /* teal deep */
+      --brand:#06b6d4; /* cyan-500 */
+      --brand2:#22d3ee; /* cyan-400 */
+      --ink:#e5f6fb; /* very light */
+      --muted:#c7d2fe; /* indigo-200 */
+      --card:#0b2230f2;
+      --accent:#84cc16; /* lime-400 */
+    }
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family: system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      color: var(--ink); line-height:1.7; background: radial-gradient(1200px 600px at 10% -10%, #134e4a 0%, transparent 60%),
+                 radial-gradient(900px 500px at 110% 10%, #1e3a8a 0%, transparent 60%),
+                 linear-gradient(160deg, var(--bg1), var(--bg2));
+      background-attachment: fixed;
+    }
+    /* Subtle medical/eye motif using CSS mask */
+    body::before{
+      content:""; position: fixed; inset: 0; pointer-events:none; opacity:.08;
+      background-image: radial-gradient(circle at 20% 30%, #ffffff 1px, transparent 1px),
+                        radial-gradient(circle at 60% 70%, #ffffff 1px, transparent 1px),
+                        radial-gradient(ellipse 60% 40% at 80% -10%, #ffffff 6px, transparent 7px);
+      background-size: 40px 40px, 48px 48px, 100% 100%;
+      mix-blend-mode: screen;
+    }
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter: blur(8px);
+      background: linear-gradient(90deg, #071824ee, #0b2230ee);
+      border-bottom: 1px solid #0ea5aab0;
+    }
+    nav{max-width:1200px; margin:auto; display:flex; gap:1rem; align-items:center; padding:.6rem 1rem;}
+    nav .brand{display:flex; gap:.6rem; align-items:center; font-weight:700; letter-spacing:.4px}
+    .brand .dot{width:12px; height:12px; border-radius:50%; background:conic-gradient(from 0deg, var(--brand), var(--brand2)); box-shadow:0 0 16px var(--brand2)}
+    nav a{color:#e2f7ff; text-decoration:none; opacity:.85}
+    nav a:hover{opacity:1}
+    .nav-links{display:flex; flex-wrap:wrap; gap:.8rem}
+
+    .hero{max-width:1200px; margin: 0 auto; padding: 5rem 1rem 2rem; display:grid; grid-template-columns: 1.2fr .8fr; gap:2rem; align-items:center}
+    .hero h1{font-size: clamp(1.8rem, 2.8vw + 1rem, 3rem); line-height:1.15; margin:0 0 1rem}
+    .hero p{font-size:1.05rem; color:#d9fbff; opacity:.95}
+    .card{background: var(--card); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,.4)}
+    .cta{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1rem}
+    .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border-radius:999px; text-decoration:none; color:#031b23; background:linear-gradient(180deg, var(--brand2), var(--brand)); border:1px solid #67e8f9; font-weight:600}
+    .btn.secondary{background:#0b2a36; color:#d7ffff; border-color:#134e4a}
+
+    main{max-width: 1100px; margin: 1rem auto 3rem; padding: 0 1rem}
+    section{margin: 2.5rem 0}
+    section h2{font-size: clamp(1.4rem, 1.1rem + 1.5vw, 2rem); margin:0 0 .6rem; display:flex; align-items:center; gap:.6rem}
+    section h2 .tag{font-size:.8rem; font-weight:700; background:#052a36; color:#9df6ff; padding:.2rem .5rem; border-radius:999px; border:1px solid #0ea5aacc}
+    .two-col{display:grid; grid-template-columns: 1fr 1fr; gap:1.2rem}
+    .kpi{display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:1rem}
+    .kpi .tile{background: #07212e; border:1px solid #0b3b4bb3; border-radius:14px; padding:.9rem}
+
+    /* Video embed */
+    .video-wrap{aspect-ratio:16/9; border-radius:16px; overflow:hidden; border:1px solid #0ea5aacc; box-shadow:0 10px 24px rgba(0,0,0,.5)}
+    iframe{width:100%; height:100%; border:0}
+
+    /* Lists */
+    ul{padding-left:1.1rem}
+    li{margin:.4rem 0}
+
+    .ref{font-size:.95rem; opacity:.9}
+
+    footer{max-width:1200px; margin: 3rem auto 4rem; padding: 0 1rem; opacity:.9}
+    footer .foot{border-top:1px dashed #114e60; padding-top:1rem; display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr}
+    }
+    @media (max-width:600px){
+      .two-col{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand"><span class="dot" aria-hidden="true"></span> Lavinda Eye Specialist Hospital</div>
+      <div class="nav-links" aria-label="Primary">
+        <a href="#intro">Introduction</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#rec1">Digital Appointments</a>
+        <a href="#rec2">Maintenance</a>
+        <a href="#rec3">Website & Marketing</a>
+        <a href="#plan">Change Plan</a>
+        <a href="#reflection">Reflection</a>
+        <a href="#conclusion">Conclusion</a>
+        <a href="#references">References</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>Final Client Recommendation & Reflection</h1>
+      <p class="card">Individual Consultancy Project for <strong>Lavinda Eye Specialist Hospital</strong> (Port Harcourt, est. 2007). This page presents the final recommendations, implementation roadmap, and personal reflection (≈1500 words), with an embedded video and downloadable presentation.</p>
+      <div class="cta">
+        <a class="btn" href="#video">Watch Reflection Video</a>
+        <a class="btn secondary" href="#ppt">Download Presentation (PPTX)</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="margin:0 0 .5rem">At-a-Glance</h3>
+      <div class="kpi">
+        <div class="tile"><strong>Client:</strong><br/>Lavinda Eye Specialist Hospital</div>
+        <div class="tile"><strong>Location:</strong><br/>Port Harcourt</div>
+        <div class="tile"><strong>Focus:</strong><br/>Ophthalmology services</div>
+        <div class="tile"><strong>Formed:</strong><br/>2007</div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Video -->
+    <section id="video">
+      <h2><span class="tag">Video</span> Final Client Recommendation & Reflection (20 ± 2 mins)</h2>
+      <div class="video-wrap">
+        <!-- Replace VIDEO_ID with your actual YouTube ID (e.g., dQw4w9WgXcQ). If using Canva/Adobe Express, replace the iframe with their provided embed. -->
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Reflection Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- PPTX download -->
+    <section id="ppt">
+      <h2><span class="tag">Presentation</span> Accompanying PowerPoint (Download)</h2>
+      <p class="card">Download the full slide deck that complements this page. It contains the visual summary, figures, and references used in the consultancy presentation.</p>
+      <div class="cta">
+        <!-- Replace the href with your hosted file path (e.g., on your LMS, Google Drive direct link, or your website). The filename below matches the provided deck. -->
+        <a class="btn" href="Client%20Recommendation%20and%20Reflection%20(edited).pptx" download>Download PPTX</a>
+        <a class="btn secondary" href="#intro">Continue Reading</a>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section id="intro">
+      <h2><span class="tag">Introduction</span> Brief Project Recap</h2>
+      <div class="two-col">
+        <article class="card">
+          <p>The client in this project is <strong>Lavinda Eye Specialist Hospital</strong>, formed in 2007 and located in Port Harcourt. The hospital serves a large ophthalmology population but experiences bottlenecks that reduce performance and competitive advantage, including: <em>delays in patient flow, limited digital presence, frequent equipment malfunctions, and budgetary constraints</em>.</p>
+          <p>The objective of this consultancy was twofold: <strong>(1)</strong> assess the root causes of these issues and <strong>(2)</strong> recommend evidence-based, practical solutions aligned with Lavinda’s goals. The final recommendations are to: implement a digital appointment & patient flow management system; establish a preventive maintenance protocol for equipment (with predictive elements); and launch a hospital website with a basic digital marketing strategy.</p>
+        </article>
+        <aside class="card">
+          <h3 style="margin-top:0">Success Measures</h3>
+          <ul>
+            <li>Improved patient satisfaction scores.</li>
+            <li>Reduced appointment rescheduling rates.</li>
+            <li>Higher equipment uptime and smoother patient flow.</li>
+            <li>Enhanced financial performance via increased volumes and fewer cancellations.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Agenda -->
+    <section id="agenda">
+      <h2><span class="tag">Agenda</span> What This Page Covers</h2>
+      <ol class="card">
+        <li>Implement a digital appointment & patient flow management system.</li>
+        <li>Establish preventive (and predictive) maintenance protocols for critical equipment.</li>
+        <li>Launch a hospital website with a foundational digital marketing strategy.</li>
+        <li>Change & implementation plan.</li>
+        <li>Reflection on challenges, solutions, skills developed, and key lessons.</li>
+        <li>Conclusion & next steps for Lavinda Eye Specialist Hospital.</li>
+      </ol>
+    </section>
+
+    <!-- Recommendation 1 -->
+    <section id="rec1">
+      <h2><span class="tag">Recommendation 1</span> Digital Appointment & Patient Flow Management</h2>
+      <div class="two-col">
+        <div class="card">
+          <p>The current manual appointment system creates unnecessary delays and bottlenecks that impact operations and service delivery. Primary survey results indicated that nearly <strong>82%</strong> of respondents linked appointment availability to increased delays.</p>
+          <p><strong>Recommendation:</strong> Adopt a digital appointment and AI‑assisted patient flow management system. This will standardize booking rules, enable triage, reduce no‑shows via reminders, and provide real‑time visibility across clinics.</p>
+          <h3>Benefits & Impacts</h3>
+          <ul>
+            <li>Streamlined operations and improved service delivery.</li>
+            <li>Evidence from international deployments shows digital/AI interventions improve scheduling and patient flow.</li>
+            <li>Simulation studies suggest digital symptom recording can reduce waiting times by ~<strong>54%</strong>, supporting urgent care flow improvements.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Indicative Features</h3>
+          <ul>
+            <li>Online bookings with SMS/WhatsApp reminders.</li>
+            <li>Automated triage forms for common ophthalmic complaints.</li>
+            <li>Queue dashboards (front desk & clinical).</li>
+            <li>Slot protection for urgent/surgical follow‑ups.</li>
+            <li>Analytics: lead‑time, no‑show rates, cycle times.</li>
+          </ul>
+          <h3>Quick Wins</h3>
+          <ul>
+            <li>Digitize intake forms to shorten front‑desk time.</li>
+            <li>Introduce staggered slotting to reduce morning peaks.</li>
+            <li>Start with one clinic; scale after 4–6 weeks of iteration.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation 2 -->
+    <section id="rec2">
+      <h2><span class="tag">Recommendation 2</span> Preventive & Predictive Maintenance Protocols</h2>
+      <div class="two-col">
+        <div class="card">
+          <p>Lavinda experiences malfunctions and delays in critical equipment (e.g., laser and phacoemulsification units), causing cancellations and rescheduling. Primary survey findings showed <strong>100%</strong> of respondents linked equipment delays/malfunctions to rescheduling chaos.</p>
+          <p><strong>Recommendation:</strong> Implement a preventive maintenance program (with basic predictive tactics) covering inventory, schedules, checklists, spare‑parts levels, vendor SLAs, and downtime tracking.</p>
+          <h3>Benefits & Impacts</h3>
+          <ul>
+            <li>Reduces failure risk and protects revenue continuity.</li>
+            <li>Preventive maintenance commonly reduces costs by <strong>12–18%</strong> and can yield up to ~<strong>400%</strong> ROI in certain contexts.</li>
+            <li>Clear thresholds for escalation shorten mean time to repair (MTTR).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Protocol Essentials</h3>
+          <ul>
+            <li>Asset registry with criticality ranking.</li>
+            <li>Manufacturer‑aligned service intervals; local vendor partnerships.</li>
+            <li>Calibration logs and pre‑op function checks.</li>
+            <li>First‑line troubleshooting guides for nurses/techs.</li>
+            <li>Downtime RCA (root cause analysis) after each incident.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation 3 -->
+    <section id="rec3">
+      <h2><span class="tag">Recommendation 3</span> Launch Website & Basic Digital Marketing</h2>
+      <div class="two-col">
+        <div class="card">
+          <p>Lavinda currently lacks an active website and has limited digital presence. Manual processes (including scheduling) exacerbate delays and reduce engagement and trust.</p>
+          <p><strong>Recommendation:</strong> Launch a modern, mobile‑first website with clear service pages, clinician profiles, online booking, patient education content, and rapid contact channels. Begin foundational digital marketing (Google Business Profile, maps, basic SEO, and timely responses).</p>
+          <h3>Benefits & Impacts</h3>
+          <ul>
+            <li>Improves patient trust and engagement; strengthens brand.</li>
+            <li>Patients increasingly research online before contacting providers; many expect responses within 24 hours—achievable through web and social messaging.</li>
+            <li>Increased appointment conversions and retention via reminders and remarketing basics.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Minimum Viable Web Stack</h3>
+          <ul>
+            <li>Homepage + Services + Doctors + Booking + Contact.</li>
+            <li>Clear CTA buttons (Book Now / Call / WhatsApp).</li>
+            <li>Accessibility basics (contrast, alt text, keyboard nav).</li>
+            <li>Schema.org markup for local business/medical clinic.</li>
+            <li>Analytics and consent banner.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Change & Implementation Plan -->
+    <section id="plan">
+      <h2><span class="tag">Change & Implementation</span> 90‑Day Plan</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3 style="margin-top:0">Phase 1 (Weeks 1–4): Foundations</h3>
+          <ul>
+            <li>Form an internal implementation team; assign a clinical champion and ops lead.</li>
+            <li>Vendor selection for scheduling tool and equipment service contracts.</li>
+            <li>Digitize intake forms; pilot in one clinic; define KPIs & baselines.</li>
+            <li>Launch website MVP; publish core pages; claim Google Business Profile.</li>
+          </ul>
+          <h3>Phase 2 (Weeks 5–8): Pilot & Iterate</h3>
+          <ul>
+            <li>Deploy booking + queue dashboards; enable reminders.</li>
+            <li>Kick off preventive maintenance schedules; stock critical spares.</li>
+            <li>Add patient education articles; set response SLAs (&lt;24 hours).</li>
+          </ul>
+          <h3>Phase 3 (Weeks 9–12): Scale & Optimize</h3>
+          <ul>
+            <li>Roll out digital flow to additional clinics/sessions.</li>
+            <li>Refine slot templates using data; reduce peak congestion.</li>
+            <li>Publish monthly uptime & satisfaction metrics; review ROI.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">KPIs & Targets</h3>
+          <ul>
+            <li>Average wait time: ↓ 30–50% by Week 12.</li>
+            <li>No‑show rate: ↓ 20% with reminders and online rescheduling.</li>
+            <li>Equipment uptime: ≥ 98% for surgical‑critical assets.</li>
+            <li>Patient satisfaction (CSAT): ≥ 4.5/5 by Quarter‑end.</li>
+          </ul>
+          <h3>Risks & Mitigations</h3>
+          <ul>
+            <li><em>Staff adoption:</em> provide short, hands‑on training; appoint super‑users.</li>
+            <li><em>Budget limits:</em> prioritize MVP features; leverage open‑source/low‑cost tools.</li>
+            <li><em>Data privacy:</em> enforce consent, access control, and audit trails.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reflection -->
+    <section id="reflection">
+      <h2><span class="tag">Reflection</span> Challenges, Solutions, Skills & Lessons</h2>
+      <div class="card">
+        <h3>Challenges & Solutions</h3>
+        <ul>
+          <li><strong>Data Gaps:</strong> Addressed with a concise primary survey and triangulation using literature on digital scheduling and maintenance ROI.</li>
+          <li><strong>Change Readiness:</strong> Phased rollout with clear ownership lowered disruption risk and built early wins.</li>
+          <li><strong>Resource Constraints:</strong> Focused on high‑leverage interventions (digital booking, preventive maintenance, basic web presence) with measurable ROI.</li>
+        </ul>
+        <h3>Skills Developed</h3>
+        <ul>
+          <li>Problem structuring and root‑cause analysis in a healthcare setting.</li>
+          <li>Implementation planning with agile, data‑driven feedback loops.</li>
+          <li>Stakeholder communication, translating evidence into action.</li>
+        </ul>
+        <h3>Key Lessons</h3>
+        <ul>
+          <li>Start simple, measure, iterate—especially for operational flow.</li>
+          <li>Preventive care applies to machines too: maintenance is a strategic lever, not a cost center.</li>
+          <li>Trust and access begin online; a credible digital front door is now essential in healthcare.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Conclusion & Next Steps -->
+    <section id="conclusion">
+      <h2><span class="tag">Conclusion</span> Summary & Immediate Next Steps</h2>
+      <div class="two-col">
+        <div class="card">
+          <p>This consultancy assessed Lavinda Eye Specialist Hospital’s operational challenges and proposed practical solutions to improve patient flow, equipment reliability, and patient engagement. The three recommendations—digital scheduling & flow, preventive/predictive maintenance, and a launch‑ready website with basic digital marketing—create a cohesive roadmap to higher efficiency and satisfaction.</p>
+          <p><strong>Success will be measured</strong> by improved satisfaction, reduced rescheduling, increased uptime, smoother flow, and stronger financial performance through increased volumes and fewer cancellations.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Next Steps</h3>
+          <ul>
+            <li>Prioritize the website launch and digital platforms.</li>
+            <li>Partner with local vendors for equipment servicing.</li>
+            <li>Establish an internal implementation team to oversee execution.</li>
+            <li>Apply lessons from this project to future consultancy roles, and deepen capability in implementation science and low‑cost healthcare tech.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- References -->
+    <section id="references">
+      <h2><span class="tag">References</span></h2>
+      <div class="ref card">
+        <p>Brightly (2023). <em>The ROI of preventive maintenance: Is it really worth it?</em></p>
+        <p>Hamasha, M. M., et al. (2023). Strategical selection of maintenance type under different conditions. <em>Scientific Reports</em>, 13(1), 15560.</p>
+        <p>Hardt, F., Kotyrba, M., Volna, E., & Jarusek, R. (2021). Innovative approach to preventive maintenance… <em>Applied Sciences</em>, 11(15), 6953.</p>
+        <p>Lavinda Eye Specialist Hospital (2025). Corporate Profile.</p>
+        <p>Montazeri, M., et al. (2020). Digital patient symptom recording to optimize patient flow… <em>medRxiv</em>.</p>
+        <p>NCBI (n.d.). Artificial intelligence for patient flow – NCBI Bookshelf.</p>
+        <p>Park, J. (2025). Healthcare marketing statistics that drive results in 2025. Digital Silk.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>© <span id="year"></span> Lavinda Consultancy Project • Designed for coursework submission</div>
+      <div>Built with accessible, mobile‑first HTML/CSS • Replace the video & PPT links with your hosted assets.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
