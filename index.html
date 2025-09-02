@@ -1,258 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lavinda Eye Specialist Hospital – Final Client Recommendation & Reflection</title>
-  <meta name="description" content="Consultancy webpage presenting the Final Client Recommendation & Reflection for Lavinda Eye Specialist Hospital, including embedded video and presentation." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lavinda Eye Specialist Hospital</title>
   <style>
-    :root{
-      --bg1:#0f172a;
-      --bg2:#0b3b4b;
-      --brand:#06b6d4;
-      --brand2:#22d3ee;
-      --ink:#e5f6fb;
-      --card:#0b2230f2;
-      --highlight:#84cc16;
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      color: #ffffff;
+      overflow-x: hidden;
+      min-height: 100vh;
     }
-    html{scroll-behavior:smooth}
-    body{
-      margin:0; font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--ink); line-height:1.7;
-      background: linear-gradient(160deg, var(--bg1), var(--bg2));
-      background-attachment: fixed;
+    
+    /* Landing Page */
+    .landing {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      text-align: center;
     }
-    header{
-      position:sticky; top:0; z-index:50; backdrop-filter: blur(8px);
-      background: linear-gradient(90deg, #071824ee, #0b2230ee);
-      border-bottom: 1px solid #0ea5aab0;
+    
+    .logo-container {
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      max-width: 90%;
     }
-    nav{max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:.6rem 1rem;}
-    nav .brand{display:flex; gap:.6rem; align-items:center; font-weight:700; font-size:1.1rem}
-    .brand .dot{width:14px; height:14px; border-radius:50%; background:conic-gradient(from 0deg, var(--brand), var(--brand2));}
-    nav a{color:#e2f7ff; text-decoration:none; padding:.4rem .8rem; border-radius:6px; transition:0.3s}
-    nav a:hover{background:var(--brand); color:#031b23}
-    .nav-links{display:flex; flex-wrap:wrap; gap:.4rem}
+    
+    .logo-container img {
+      max-width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+    }
+    
+    .content-container {
+      background: rgba(13, 30, 45, 0.9);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      max-width: 800px;
+      width: 90%;
+      margin-bottom: 2rem;
+    }
+    
+    .content-container h1 {
+      margin-top: 0;
+      color: #4fc3f7;
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+    
+    .content-container p {
+      margin-bottom: 2rem;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      color: #e3f2fd;
+    }
+    
+    .btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 1.8rem;
+      background: #0288d1;
+      color: white;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      min-width: 180px;
+    }
+    
+    .btn:hover {
+      background: #03a9f4;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(2, 136, 209, 0.4);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #0288d1;
+      color: #03a9f4;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(2, 136, 209, 0.15);
+    }
+    
+    .btn-icon {
+      margin-right: 8px;
+      font-size: 1.1em;
+    }
 
-    .hero{max-width:1200px; margin:0 auto; padding:5rem 1rem 2rem; display:grid; grid-template-columns:1.2fr .8fr; gap:2rem; align-items:center}
-    .hero h1{font-size:2.4rem; margin:0 0 1rem; color:var(--brand2)}
-    .card{background: var(--card); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:1.2rem;}
-    .cta{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1rem}
-    .btn{padding:.7rem 1.2rem; border-radius:999px; text-decoration:none; font-weight:600; transition:0.3s}
-    .btn.primary{background:linear-gradient(180deg, var(--brand2), var(--brand)); color:#031b23}
-    .btn.secondary{background:#0b2a36; color:#d7ffff; border:1px solid #134e4a}
-    .btn:hover{opacity:0.9; transform:translateY(-2px)}
+    /* Footer */
+    .footer {
+      margin-top: 2rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
 
-    main{max-width:1100px; margin:1rem auto 3rem; padding:0 1rem}
-    section{margin:3rem 0}
-    section h2{font-size:1.8rem; margin:0 0 .8rem; color:var(--highlight)}
-    section h3{margin-top:1.2rem; font-size:1.3rem; color:var(--brand2); display:flex; align-items:center; gap:.5rem}
-    section h3 span.icon{font-size:1.3rem}
-
-    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem}
-    .kpi{display:grid; grid-template-columns:repeat(2,1fr); gap:1rem}
-    .tile{background:#07212e; padding:.9rem; border-radius:14px; text-align:center}
-
-    .video-wrap{aspect-ratio:16/9; border-radius:16px; overflow:hidden; border:1px solid #0ea5aacc; box-shadow:0 8px 20px rgba(0,0,0,0.5)}
-    iframe{width:100%; height:100%; border:0}
-
-    ol.card, ul.card{padding:1rem 1.2rem; border-radius:12px; background:var(--card)}
-    ol.card li, ul.card li{margin:.5rem 0}
-
-    footer{max-width:1200px; margin:3rem auto 4rem; padding:0 1rem; opacity:.9; text-align:center}
-    footer .foot{border-top:1px dashed #114e60; padding-top:1rem;}
-
-    @media(max-width:900px){.hero{grid-template-columns:1fr}}
-    @media(max-width:600px){.two-col{grid-template-columns:1fr}}
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .content-container {
+        padding: 1.8rem;
+      }
+      
+      .content-container h1 {
+        font-size: 1.8rem;
+      }
+      
+      .btn {
+        padding: 0.9rem 1.5rem;
+        min-width: 160px;
+        font-size: 0.95rem;
+      }
+      
+      .btn-container {
+        gap: 12px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .btn-container {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .btn {
+        width: 100%;
+      }
+      
+      .content-container h1 {
+        font-size: 1.6rem;
+      }
+      
+      .content-container p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="brand"><span class="dot"></span> Lavinda Eye Specialist Hospital</div>
-      <div class="nav-links">
-        <a href="#intro">Introduction</a>
-        <a href="#agenda">Agenda</a>
-        <a href="#rec1">Digital Appointments</a>
-        <a href="#rec2">Maintenance</a>
-        <a href="#rec3">Website & Marketing</a>
-        <a href="#plan">Change Plan</a>
-        <a href="#reflection">Reflection</a>
-        <a href="#conclusion">Conclusion</a>
-        <a href="#references">References</a>
-      </div>
-    </nav>
-  </header>
 
-  <div class="hero">
-    <div>
-      <h1>Final Client Recommendation & Reflection</h1>
-      <p class="card">Consultancy Project for <strong>Lavinda Eye Specialist Hospital</strong> (Port Harcourt, est. 2007). This page presents the final recommendations, implementation roadmap, and personal reflection (≈1500 words), with an embedded video and downloadable presentation.</p>
-      <div class="cta">
-        <a class="btn primary" href="#video">▶ Watch Reflection Video</a>
-        <a class="btn secondary" href="Client%20Recommendation%20and%20Reflection%20(edited).pptx" download>⬇ Download PPTX</a>
+  <!-- Landing Page -->
+  <section class="landing" id="landing">
+    <div class="logo-container">
+      <img src="Logo.png" alt="Lavinda Eye Specialist Hospital Logo">
+    </div>
+    
+    <div class="content-container">
+      <h1>Individual Consultancy Project Presentation</h1>
+      <p>Exploring operational improvements for Lavinda Eye Specialist Hospital through strategic recommendations and implementation planning.</p>
+      
+      <div class="btn-container">
+        <!-- Replace VIDEO_URL with your actual video link -->
+        <a href="VIDEO_URL" target="_blank" class="btn">
+          <span class="btn-icon">▶</span> Watch Video
+        </a>
+        
+        <!-- Replace presentation.pptx with your actual file -->
+        <a href="presentation.pptx" download class="btn">
+          <span class="btn-icon">⬇</span> Download PPTX
+        </a>
+        
+        <!-- Link to slideshow page -->
+        <a href="slideshow.html" class="btn btn-secondary">
+          <span class="btn-icon">➡</span> View Presentation Slides
+        </a>
       </div>
     </div>
-    <div class="card">
-      <h3>At-a-Glance</h3>
-      <div class="kpi">
-        <div class="tile"><strong>Client:</strong><br/>Lavinda Eye Specialist Hospital</div>
-        <div class="tile"><strong>Location:</strong><br/>Port Harcourt</div>
-        <div class="tile"><strong>Focus:</strong><br/>Ophthalmology services</div>
-        <div class="tile"><strong>Formed:</strong><br/>2007</div>
-      </div>
+    
+    <div class="footer">
+      Lavinda Eye Specialist Hospital © 2025
     </div>
-  </div>
+  </section>
 
-  <main>
-    <section id="video">
-      <h2>Reflection Video</h2>
-      <div class="video-wrap">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Reflection Video" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <section id="intro">
-      <h2>Introduction</h2>
-      <p class="card">Lavinda Eye Specialist Hospital serves a large ophthalmology population but faces delays in patient flow, limited digital presence, equipment malfunctions, and budgetary constraints. The objective of this consultancy was to assess root causes and recommend practical solutions. Recommendations include: a digital appointment and patient flow management system, preventive maintenance protocols, and a hospital website with a digital marketing strategy.</p>
-    </section>
-
-    <section id="agenda">
-      <h2>Agenda</h2>
-      <ol class="card">
-        <li>Digital appointment & flow management system</li>
-        <li>Preventive maintenance protocols</li>
-        <li>Website & digital marketing</li>
-        <li>Change & implementation plan</li>
-        <li>Reflection</li>
-        <li>Conclusion & next steps</li>
-      </ol>
-    </section>
-
-    <section id="rec1">
-      <h2>Recommendation 1: Digital Appointment & Flow Management</h2>
-      <div class="card">
-        <p>The manual appointment system creates bottlenecks. <strong>Recommendation:</strong> adopt a digital appointment and AI-assisted patient flow system.</p>
-        <ul>
-          <li>Streamlined operations and improved service delivery</li>
-          <li>Reduced waiting times (~54% improvement in studies)</li>
-          <li>Automated reminders to lower no-shows</li>
-          <li>Real-time visibility for clinics and staff</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="rec2">
-      <h2>Recommendation 2: Preventive & Predictive Maintenance</h2>
-      <div class="card">
-        <p>Critical equipment malfunctions cause delays and rescheduling. <strong>Recommendation:</strong> implement a preventive maintenance program with schedules, checklists, and vendor SLAs.</p>
-        <ul>
-          <li>Higher uptime and reliability (target ≥98%)</li>
-          <li>Reduced maintenance costs (12–18% lower)</li>
-          <li>Improved patient experience and fewer cancellations</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="rec3">
-      <h2>Recommendation 3: Website & Digital Marketing</h2>
-      <div class="card">
-        <p>Lavinda currently lacks an active website and digital presence. <strong>Recommendation:</strong> launch a modern, mobile-first website with service pages, clinician profiles, booking features, and patient education content.</p>
-        <ul>
-          <li>Launch website MVP with online booking</li>
-          <li>Create Google Business Profile & improve maps visibility</li>
-          <li>Apply basic SEO for discoverability</li>
-          <li>Provide timely patient engagement via messaging</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="plan">
-      <h2>Change & Implementation Plan</h2>
-      <div class="card">
-        <p><strong>90-Day Plan</strong></p>
-        <p><em>Phase 1 (Weeks 1–4):</em> Vendor selection, digitize intake forms, launch website MVP.<br>
-        <em>Phase 2 (Weeks 5–8):</em> Deploy booking system, start preventive maintenance, expand digital presence.<br>
-        <em>Phase 3 (Weeks 9–12):</em> Scale implementation, refine processes, review ROI.</p>
-        <p><strong>KPIs:</strong></p>
-        <ul>
-          <li>Reduce wait times by 30–50%</li>
-          <li>No-show rate reduced by 20%</li>
-          <li>Equipment uptime ≥98%</li>
-          <li>Satisfaction ≥4.5/5</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="reflection">
-      <h2>Reflection</h2>
-      <div class="card">
-        <h3><span class="icon">⚠️</span> Challenges</h3>
-        <ul>
-          <li>Data gaps due to limited hospital reporting.</li>
-          <li>Change readiness concerns among staff.</li>
-          <li>Resource constraints and budget limitations.</li>
-        </ul>
-
-        <h3><span class="icon">💡</span> Solutions</h3>
-        <ul>
-          <li>Conducted targeted surveys and triangulated with literature.</li>
-          <li>Adopted phased rollouts to lower disruption risks.</li>
-          <li>Focused on high ROI interventions: digital booking, preventive maintenance, basic web presence.</li>
-        </ul>
-
-        <h3><span class="icon">🛠️</span> Skills Developed</h3>
-        <ul>
-          <li>Problem structuring and root-cause analysis in healthcare.</li>
-          <li>Implementation planning with agile, data-driven feedback loops.</li>
-          <li>Stakeholder communication and evidence translation.</li>
-        </ul>
-
-        <h3><span class="icon">📘</span> Lessons Learned</h3>
-        <ul>
-          <li>Start small, measure results, and iterate improvements.</li>
-          <li>Preventive maintenance is strategic, not just operational.</li>
-          <li>A strong digital presence builds trust and access to care.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="conclusion">
-      <h2>Conclusion & Next Steps</h2>
-      <div class="card">
-        <p>The consultancy recommended digital scheduling, preventive maintenance, and a digital marketing-enabled website. These will improve efficiency, patient satisfaction, and financial performance.</p>
-        <p><strong>Next Steps:</strong></p>
-        <ul>
-          <li>Prioritize website launch</li>
-          <li>Partner with vendors for equipment servicing</li>
-          <li>Establish an internal implementation team</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="references">
-      <h2>References</h2>
-      <div class="card">
-        <p>Brightly (2023). The ROI of preventive maintenance.</p>
-        <p>Hamasha, M. M., et al. (2023). Strategic selection of maintenance type. Scientific Reports.</p>
-        <p>Hardt, F., et al. (2021). Innovative approach to preventive maintenance. Applied Sciences.</p>
-        <p>Lavinda Eye Specialist Hospital (2025). Corporate Profile.</p>
-        <p>Montazeri, M., et al. (2020). Digital patient symptom recording. medRxiv.</p>
-        <p>NCBI (n.d.). Artificial intelligence for patient flow.</p>
-        <p>Park, J. (2025). Healthcare marketing statistics. Digital Silk.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="foot">
-      <div>© <span id="year"></span> Lavinda Consultancy Project • Coursework Submission</div>
-      <div>Accessible, mobile-first HTML/CSS</div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
